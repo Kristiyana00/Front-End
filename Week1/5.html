@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <fieldset form="form1">
+            <legend>User Information</legend>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" form="form1"><br>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" form="form1">
+        </fieldset><br>
+        <fieldset form="form2">
+            <legend>Personal Information</legend>
+            <label for="fname">First name:<br></label>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:<br></label>
+            <input type="text" id="lname" name="lname"><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+           Favorite food: 
+            <select name="favFood">
+                <option value="chocolate">Chocolate</option>
+                <option value="pasta">Pasta</option>
+                <option value="candy">Candy</option>
+                <option value="pizza">Pizza</option>
+            </select>
+        </fieldset>
+        <br>
+        <button type="submit">Register</button> <button type="reset">Reset</button>
+    </body>
+</html>
