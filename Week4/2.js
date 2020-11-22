@@ -1,17 +1,17 @@
 class Person{
     //planet = "Earth";
-    constructor(name){
+    constructor(name, planet){
         this.name = name;
-        this.planet = "Earth";
+        this.planet = planet;
     }
     print(){
-        console.log("Здравей, " + this.name + " от планетата " + this.planet);
+        console.log("Здравей, " + this.name + " от планетата " + this.newplanet);
     }
 }
-
-const Peter = new Person("Peter");
-const Ivan = new Person("Ivan");
-const Nikolay = new Person("Nikolay");
+Person.prototype.newplanet = "Earth";
+const Peter = new Person("Peter", "Mars");
+const Ivan = new Person("Ivan", "Venus");
+const Nikolay = new Person("Nikolay", "Neptune");
 
 Peter.print();
 Ivan.print();
