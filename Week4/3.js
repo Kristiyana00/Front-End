@@ -4,11 +4,6 @@ class Item{
         this.name = name;
         this.discount = discount;
     }
-
-    getPrice()
-    {
-        return this.price;
-    }
     calculate()
     {
         return this.price - (this.price*(this.discount/100));
@@ -16,6 +11,7 @@ class Item{
 }
 
 Item.prototype.price = 1000;
+Item.prototype.getPrice = function() {return this.price;};
 
 var mouse = new Item("Mouse", 10);
 console.log(mouse.getPrice());
