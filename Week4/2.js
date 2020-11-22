@@ -1,6 +1,6 @@
 class Person{
     //planet = "Earth";
-    constructor(name, planet){
+    constructor(name){
         this.name = name;
     }
     print(){
