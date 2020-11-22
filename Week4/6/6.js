@@ -18,7 +18,7 @@ let content = [
   ];
   
   
-  tableHead = (table, columnNames) => {
+  function tableHead(table, columnNames) {
     let table_head = table.createTHead();
     let row = table_head.insertRow();
     for (const name of columnNames) {
