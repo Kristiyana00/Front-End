@@ -8,3 +8,6 @@ class Person{
         console.log(printSalary());
     }
 }
+
+const person = new Person();
+person.getSecretSalaryInfo();
