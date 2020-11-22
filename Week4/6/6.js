@@ -52,3 +52,7 @@ let content = [
   caption.innerText = "Table caption";
   
   document.body.appendChild(table);
+
+function swap()
+{
+}
