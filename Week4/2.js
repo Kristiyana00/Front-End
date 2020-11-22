@@ -2,7 +2,6 @@ class Person{
     //planet = "Earth";
     constructor(name, planet){
         this.name = name;
-        planet = "Земя";
     }
     print(){
         console.log("Здравей, " + this.name + " от планетата " + this.planet);
