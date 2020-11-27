@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="stylesheet" type="text/css" media="screen" href="style1.css">
+        <title>Flutter</title>
+    </head>
+    <body class="feed-page">
+        <header class="feed-header">
+            <h1 class="header1">Flutter</h1>
+            <input type="search" class="search-field" placeholder="Search">
+        </header>
+        <div>
+            <main id="mainPage">
+                <section class="profile">
+                    <header class="avatar">
+                        <img src="boy.png" alt="boy" id="picture">
+                        <label for="picture" id="picLabel">Kristiyana Nikolova</label>
+                    </header>
+
+                    <section id="activity">
+                        <ul>
+                            <li>
+                                <p class="numbers" id="posts">Posts</p>
+                                <label for="posts" class="numStyle">1</label>
+                            </li>
+                            <li>
+                                <p class="numbers" id="reactions">Reactions</p>
+                                <label for="reactions" class="numStyle">7</label>
+                            </li>
+                        </ul>
+                        <button id="logOut">Log Out</button>
+                    </section>
+                </section>
+
+                <section class="feed">
+                    <div class="postSth">
+                        <img src="boy.png" alt="boy" id="postSthPic">
+                        <input type="text" id="postOnFeed" placeholder="Say something">
+                    </div> 
+                <div class="all-posts">
+                    <div class="second-post border" id="postID">
+                        <img src="boy.png" alt="boy">
+                        <div class="post_content">
+                            <span class="name">Kristiyana Nikolova</span>
+                            <span class="bullet">&#8226;</span>
+                            <span style="color: grey;">7 seconds ago</span>
+                            <span class="close-button">&#x2716;</span>
+                            <br>
+                            <p>Ex eu non voluptate esse aliqua velit. Nulla duis ipsum incididunt culpa
+                                laborum commodo consequat in. Nostrud elit dolor laboris tempor officia duis
+                                exercitation anim voluptate ut enim officia proident. Labore elit esse velit quis
+                                et voluptate officia laboris cillum dolor pariatur excepteur esse laborum.
+                                Veniam adipisicing quis nisi cillum voluptate veniam nulla sunt.
+                            </p>
+                            <button class="like-button"></button>
+                            <span class="reaction">7</span>
+                            <button class="dislike-button"></button>
+                            <span class="reaction">2</span>
+                        </div>
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="second-post" id="postID">
+                        <img src="boy.png" alt="boy">
+                        <div class="post_content">
+                            <span class="name">Krisi</span>
+                            <span class="bullet">&#8226;</span>
+                            <span style="color: grey;">Last month</span>
+                            <span class="close-button">&#x2716;</span>
+                            <br>
+                            <p>Mollit consequat ipsum sit laboris incididunt sunt deserunt velit elit eu proident.
+                            </p>
+                            <button class="like-button"></button>
+                            <span class="reaction">3</span>
+                            <button class="dislike-button"></button>
+                            <span class="reaction">0</span>
+                        </div>
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                </section>
+
+            </main>
+        </div>
+    </body>
+</html>
