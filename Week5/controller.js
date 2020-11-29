@@ -1,15 +1,47 @@
+function toLogin(){
+    let errors = document.getElementById("errors");
+        errors.innerHTML = "";
+        let validateEmail = document.getElementById("user_email").value;
+            let validatePassword = document.getElementById("user_password").value;
+            window.auth.login(validateEmail, validatePassword, function(isSuccessful,errorCode, errorMessage){
+                if (isSuccessful) {
+                    alert("Влизането е успешно!");
+                    location.replace("./posts.html");
+                } else {
+                    errors.innerText = errorMessage;
+                }
+            });
+}
+function toRegister()
+{
+    let username = document.getElementById("usernameid").value;
+    let validateEmail = document.getElementById("user_email").value;
+    let validatePassword = document.getElementById("user_password").value;
+    window.auth.register(username, validateEmail, validatePassword, function(isSuccessful,errorCode, errorMessage){
+        if(isSuccessful){
+            alert("Регистрацията е успешна!");
+            location.replace("./posts.html");
+        }
+        else
+        {
+            errors.innerText = errorMessage;
+        }
+    });
+
+}
+
 toValidate = {formValidation(formId){
-    /*let user_email = document.getElementsByName("email");
-    let user_pass = document.getElementsByName("password");*/
+    
     if(this.passValidation() && this.emailValidation())
     {
-        document.getElementById("errors").innerHTML = "";
-        if(formId === "register-form"){
-            alert("Регистрацията е успешна!");
+        let errors = document.getElementById("errors");
+        errors.innerHTML = "";
+        if(formId === "login-form"){
+            alert("Влизането е успешно!");    
         }
-        else if(formId === "login-form")
+        else if(formId === "register-form")
         {
-            alert("Влизането е успешно!");
+            alert("Регистрацията е успешна!");
         }
     }
 }
@@ -75,6 +107,8 @@ passValidation()
 
     return true;
 }
+
+
 }
 
 document.addEventListener('DOMContentLoaded', function(){
@@ -82,6 +116,22 @@ document.addEventListener('DOMContentLoaded', function(){
     form.addEventListener("submit", function(event){
         event.preventDefault();
         let formId = form.id;
-        toValidate.formValidation.bind(toValidate)(formId);
+        let isValid = toValidate.formValidation.bind(toValidate)(formId);
+        if(!isValid)
+        {
+            return;
+        }
+        if(formId === "register-form")
+        {
+            toRegister();
+        }
+        else if(formId === "login-form")
+        {
+            toLogin();
+        }
+        else
+        {
+            return;
+        }
     })
 });
